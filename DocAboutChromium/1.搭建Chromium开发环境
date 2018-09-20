@@ -1,0 +1,33 @@
+注意：
+搭建部署chromium源码开发环境，请严格按照谷歌提供的搭建步骤进行部署。
+由于网络限制，需要添加代理后进行配置。
+谷歌提供的搭建chromium源码开发环境的网址如下（必读）：
+https://chromium.googlesource.com/chromium/src/+/master/docs/windows_build_instructions.md
+
+具体参考流程及注意事项如下：
+第一步：
+安装Vistual Studio 2017
+1.安装谷歌文档中要求的Visual Studio 2017版本，安装VS时必须配置“Desktop development with C++” --“MFC and ATL support” sub-component。
+2.安装文档中要求的Windows 10 SDK 版本。
+3.在控制面板-程序和功能-选中SDK，配置Debugging Tools For Windows。
+
+第二步：
+安装depot_tools
+注：切勿自行安装depot_tools的git,python依赖性，容易出现版本不匹配导致编译失败的问题。由于gclient配置需要下载git/python/gn等以及其他编译工具等等，
+   尽量使用代理进行下列操作。
+1.设置代理
+2.下载安装谷歌文档中指定的depot_tools，并安装文档要求配置环境变量
+3.cmd执行gclient，该命令第一次执行时会自行更新工具依赖的可以匹配版本的git/python。
+
+第三步：
+下载chromium代码
+注：如果由于网络原因不稳定导致下载失败，请反复执行失败的操作直至成功。切勿不按步骤顺序执行。
+1.fetch chromium下载代码（当前20G左右）
+  fetch --no-history chromium // 只下载最新版本，大约10G
+  fetch --nohooks --no-history chromium // 只下载最新版本，大约10G，并且不下载相应的编译环境，需要改命令执行成功后单独执行 gclient runhooks命令
+2.按照谷歌文档安装并配置ninja
+3.执行gn gen --ide=vs out\Default 生成all.sln文件
+4.执行ninja -C out/Debug chrome 进行编译，生成chrome.exe
+
+搭建成功。
+  
