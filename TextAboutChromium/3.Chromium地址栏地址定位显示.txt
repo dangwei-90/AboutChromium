@@ -1,0 +1,18 @@
+打开需要获取地址的url，地址栏出现跟踪位置的小图标，点击该小图标弹出地址定位框管理界面
+
+代码跟踪如下：
+1.ContentSettingImageView::ShowBubble() 用于弹出气泡框
+2.ContentSettingBubbleModel::CreateContentSettingBubbleModel() 创建bubble
+3.content_type 值为 CONTENT_SETTINGS_TYPE_GEOLOCATION
+4.ContentSettingDomainListBubbleModel::ContentSettingDomainListBubbleModel() 设置bubble
+5.ContentSettingDomainListBubbleModel::SetDomainsAndCustomLink() 添加带有链接的text信息
+  IDS_GEOLOCATION_BUBBLE_SECTION_ALLOWED ： 
+    This page contains elements from the following sites that are tracking your location:
+  IDS_GEOLOCATION_BUBBLE_SECTION_DENIED： 
+    The following sites have been blocked from tracking your location on this page:
+  IDS_GEOLOCATION_BUBBLE_CLEAR_LINK：
+    Clear these settings for future visits
+  IDS_GEOLOCATION_BUBBLE_REQUIRE_RELOAD_TO_CLEAR：
+    Settings will be cleared on next reload
+6.
+
