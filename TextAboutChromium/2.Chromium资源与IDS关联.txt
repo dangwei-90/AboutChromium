@@ -1,0 +1,19 @@
+chromium使用grid工具来生成资源，并定义有国际翻译标准
+全称（google Resource and Internationalization Tool）
+
+1.grit处理的相关格式
+  grd：模板，列表的创建，字符串的翻译
+  xtb: 各个国家语言的翻译文件和参数
+  每个grd对应对个xtb文件
+  
+2.grit组成
+  grit包含client 和 server/console，client开源，server/console由谷歌人员维护
+  xtb属于付费翻译
+ 
+3.xtb中字符串的对应
+  xtb每个字符串对应唯一的id值。
+  各个不同语言的xtb结构及数据内容相同。
+  而id值是由表示控件的 IDS_XXXXX 通过无符号64位md5转换得到 id值，因为md5不可逆，所以我们采用别的方法找对应关系。
+  第一步：通过中文提示，找到对应的xtb该提示的id值和value值
+  第二步：根据id值，找到英文的xtb对应的value值
+  第三步：在generated_resources.grd文件中，找到该值对应的message name，即为id值对应的 IDS_XXXXX
