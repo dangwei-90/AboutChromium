@@ -1,4 +1,4 @@
-ninja编译报错：
+﻿ninja编译报错：
 ........exe:error:failed to write the output file:permission denied
 ninja:build stopped: subcommand failed
 		  
@@ -8,7 +8,7 @@ error MSB3073: The command "ninja -C ..... " exited with code 1.
 导致该报错的操作：
 修改view工程的代码，对chrome作为启动程序进行Local Windows Debugger时，报错
 
-解决步骤：
-1.Vs2017修改为英文版（供参考）
-2.关闭所有可能占用报错文件的进程
+解决方法：
+1.进程残留，关闭该进程(主要解决方式)
+2.Vs2017修改为英文版（供参考）
 3.重启计算机，再次Local Windows Debugger
