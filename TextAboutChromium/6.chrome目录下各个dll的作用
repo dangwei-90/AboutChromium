@@ -1,0 +1,182 @@
+1.chrome.dll
+  浏览器的内核文件，执行chrome几乎所有的功能
+2.bink_web.dll
+  ???
+3.content.dll
+  提供内核多线程的sandbox功能的模块
+4.resources.pak
+  是chrome的资源文件，包括很多如chrome://开头的页面资源等
+5.icudtl.dat
+  ???
+6.nacl_irt_x86_32.nexe
+  Google Native Client相关插件
+7.net.dll
+  网络模块
+8.v8.dll
+  javascript解析引擎模块
+9.nacl_irt_x86_64.nexe
+  NACL模块
+10.mksnapshot.ia32.exe
+  ???
+11.d3dcompiler_46.dll
+  硬件加速匹配模块
+12.blink_platform.dll
+  ???
+13.sync.dll：
+  ???
+14.skia.dll：
+  ???
+15.media.dll：
+  ???
+16.chrome_200_percent.pak
+  高DPI资源，???
+17.nacl64.exe
+  ???
+18.cc.dll:
+  ???
+19.gpu.dll
+  实现gpu的库
+20.webkit_storage_browser.dll
+  ???
+21.crnss.dll
+  ???
+22.ash.dll
+  ???
+23.ppapi_proxy.dll
+  ???
+24.icui18n.dll
+  ???
+25.base_win64.dll
+  base 64编解码库
+26.chrome_100_percent.pak
+  普通DPI theme资源包
+27.views.dll
+  view模块，展示库
+28.base.dll
+  base模块，基础库
+29.protoc.exe
+  ???
+30.policy_component.dll
+  ???
+31.ffmpegsumo.dll
+  ???
+gcm.dll
+
+gfx.dll
+
+keyboard_resources.pak：
+
+wifi_component.dll：
+
+ppapi_shared.dll
+
+ppapi_shared_win64.dll
+
+yasm.exe
+
+translator.dll
+
+ui_base.dll
+
+libGLESv2.dll
+
+app_list.dll
+
+wtf.dll
+
+message_center.dll
+
+url_matcher.dll
+
+gl_wrapper.dll
+
+gles2_implementation.dll
+
+aura.dll
+
+compositor.dll
+
+crssl.dll
+
+crnspr.dll
+
+metro_driver.dll
+
+content_resources.pak
+
+ipc_win64.dll
+
+printing.dll
+
+net_with_v8.dll
+
+protobuf_lite.dll
+
+base_prefs.dll
+
+events.dll
+
+ipc.dll
+
+delegate_execute.exe
+
+gin.dll
+
+wm_core.dll
+
+url_lib.dll
+
+webkit_storage_common.dll
+
+keyboard.dll
+
+native_theme.dll
+
+gfx_geometry.dll
+
+ash_with_content.dll
+
+wow_helper.exe
+
+gesture_detection.dll
+
+webkit_gpu.dll
+webkit_compositor_bindings.dll
+
+webview.dll
+
+shell_dialogs.dll
+
+webdata_common.dll
+
+ppapi_host.dll
+
+blink_heap.dll
+
+chrome_elf.dll
+
+libEGL.dll
+
+webkit_common.dll
+
+mojo_common_lib.dll
+
+webkit_child.dll
+
+shared_memory_support.dll
+
+keyed_service_content.dll
+
+blink_common.dll
+
+browser_ui_views.dll
+
+surface.dll
+
+wtf_unittest_helpers.dll
+
+libvpx_obj_int_extract.exe
+
+mojo_system.dll
+
+locales：
