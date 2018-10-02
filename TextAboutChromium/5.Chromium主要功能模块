@@ -1,0 +1,22 @@
+1.base
+  基础模块，放最基本的操作封装
+2.ash
+  aura she`ll ???
+3.breakpad
+  崩溃捕捉
+4.chrome
+  所有功能都在该模块工程下
+5.cryoto
+  加密和解密
+6.nataive libary
+  代替activex的技术
+7.media
+  音频解码
+8.ipc
+  进程间通信
+9.jingle
+  p2p库
+10.net
+  网络通信组件
+11.ui
+  Ui
