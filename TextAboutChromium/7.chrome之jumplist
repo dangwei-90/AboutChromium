@@ -4,4 +4,17 @@ chrome在win7及之后系统添加jumplist功能。jumplist即系统任务栏相
      ..\chromium\src\chrome\browser\win\jumplist.cpp
      
 主要函数：
-explicit JumpList(Profile* profile)   // 显示构造函数
+explicit JumpList(Profile* profile);    // 显示构造函数
+~JumpList() override;                   // 重写（父类的）析构函数
+
+void TopSitesLoaded(history::TopSites* top_sites) override;                               // 重写topsites ???
+void TopSitesChanged(history::TopSites* top_sites, ChangeReason change_reason) override;  // 修改topsites
+
+void TabRestoreServiceChanged(sessions::TabRestoreService* service) override;        // ???
+void TabRestoreServiceDestoryed(session::TabRestoreService* service) override;
+
+void InitializeTimerForUpdate();    // 一个一次性的初始化jumplist的函数。如果队列已有则清除后发送一个新的请求。
+
+void ProcessNotifications();       // 进程更新通知。
+
+void ProcessTopSitesNotification();     // topsites服务通知
