@@ -25,4 +25,31 @@ void ProcessTabRestoreServiceNotification();      // tabrestore服务通知
 
 void OnMostVisitedURLsAvailable(const history::MostVisitedURLList& data);       // 回调，最常去网站的URL
 
-bool AddTab(const sessions::TabRestoreService::Tab& tab, size_t max_items);     // 添加shellLinkItem
+// ShellLinkItem ???
+bool AddTab(const sessions::TabRestoreService::Tab& tab, size_t max_items); 
+                                                                      // 添加一个新的ShellLinkItem，用于标签的跳转列表数据
+                                                                      // 所以不会超过maxitems。
+
+void AddWindow(const sessions::TabRestoreService::Window& window, size_t max_items); 
+                                                                      // 在窗口的每个选项卡中添加一个新的ShellLinkItem到JumpList数据
+                                                                      // 如果这样做不会超过maxitems。
+
+void StartLoadingFavicon();       // 加载网站图标
+
+void OnFaviconDataAvailable(const favicon_base::FaviconImageResult& image_result);   // 回调，当加载一个网站图标时用于历史服务
+
+void PostRunUpdate();   // 发送更新和删除jumplist的相关文件夹的命令
+
+void OnRunUpdateCompletion(std::unique_ptr<UpdateTransaction> update_transaction);   // 回调，合并更新操作结果，并返回实例
+
+void CancelPendingUpdate();    // 结束一个未执行的更新
+
+void Terminate();   // 终止函数
+
+static void RunUpdateJumpList(...);     // 更新jumplist 1.创建新的jumplist没有图标，2.通知操作系统，3.删除过时图标
+ 
+static void CreateNewJumpListAndNotifyOS(...);    // 创建jumplist
+
+static int CreateIconFiles(...);   // 创建图标文件
+
+static void DeleteIconFiles(...);       // 删除图标文件
