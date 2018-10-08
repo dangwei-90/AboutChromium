@@ -1,0 +1,7 @@
+chrome在win7及之后系统添加jumplist功能。jumplist即系统任务栏相关的功能，包括任务栏图标、鼠标放置后视图、进度条、右键菜单等等。
+
+路径：..\chromium\src\chrome\browser\win\jumplist.h
+     ..\chromium\src\chrome\browser\win\jumplist.cpp
+     
+主要函数：
+explicit JumpList(Profile* profile)   // 显示构造函数
