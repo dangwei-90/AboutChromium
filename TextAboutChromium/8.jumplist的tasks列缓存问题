@@ -1,0 +1,4 @@
+目前测试结论：tasks列的缓存可能由系统保存
+通过代码刷新的方式：
+   屏蔽 jumplist.cc文件中 begin_update_timer.Elapsed() >= kTimeOutForBeginUpdate的判断
+   反复对jumplist右键点击 新建窗口、360极速浏览器等按钮，然后关闭重复按钮，可以激活对jumplist的刷新。
