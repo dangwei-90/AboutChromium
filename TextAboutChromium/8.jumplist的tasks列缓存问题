@@ -1,4 +1,10 @@
 目前测试结论：tasks列的缓存可能由系统保存
 通过代码刷新的方式：
-   屏蔽 jumplist.cc文件中 begin_update_timer.Elapsed() >= kTimeOutForBeginUpdate的判断
-   反复对jumplist右键点击 新建窗口、360极速浏览器等按钮，然后关闭重复按钮，可以激活对jumplist的刷新。
+   屏蔽 jumplist.cc文件中删除判断：
+   1. begin_update_timer.Elapsed() >= kTimeOutForBeginUpdate
+   2. add_custom_category_timer.Elapsed() >= kTimeOutForAddCustomCategory  
+   3. !jumplist_updater.AddCustomCategory(
+          l10n_util::GetStringUTF16(IDS_RECENTLY_CLOSED), recently_closed_pages, kRecentlyClosedItems))
+   防止该三处直接return,导致jumplist更新tasks栏不生效
+   
+   之后，反复对jumplist右键点击 新建窗口、360极速浏览器等按钮，然后关闭重复按钮，可以激活对jumplist的刷新。
