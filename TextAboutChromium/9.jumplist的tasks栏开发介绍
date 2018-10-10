@@ -1,0 +1,10 @@
+jumplist开发的主要cc文件集中在 jumplist.cc及jumplist_updater.cc文件。涉及jumplist类，JumpListUpdater类，及IShellList类。
+
+大概逻辑及用到的主要函数：
+1. 执行jumplist.cc中 jumplist()构造。构造中包括注册jumplist等等系列操作
+2. 执行jumplist.cc中 create...()函数。用于create icon,url,command等等。
+3. 执行jumplist.cc中，UpdateTaskCategory()函数。该函数用于更新tasks栏的相关数据（tasks开发时主要修改该函数）。
+4. 执行jumplist_updater.cc中，AddShellLink()函数。该函数主要调用COM IShellList接口，实现jumplist，核心。
+5. 执行jumplist.cc中，ShutDown()函数。该函数调用Terminate()执行退出操作。
+
+开发中断点可以优先打在以上函数中。
