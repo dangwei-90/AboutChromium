@@ -45,7 +45,13 @@
    git config --global user.email dangwei@360.cn
    git config --list // 可查看
    
+第四步，Install depot_tools
+   下载depot_tools
+   git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
    
+   配置环境变量：
+   把depot_tools 拷贝至 /path/to/depot_tools
+   export PATH="$PATH:/path/to/depot_tools"
    
    
    
