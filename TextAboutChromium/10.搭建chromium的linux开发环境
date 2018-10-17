@@ -1,1 +1,13 @@
+系统环境：Ubuntu x64 14.04.5 （ubuntu-14.04.5-desktop-i386.iso）
+参考文档：https://chromium.googlesource.com/chromium/src/+/master/docs/linux_build_instructions.md
+虚拟机环境：Vmware 14
+
+第一步，安装iso.
+   首次安装乌班图系统后登陆root，需要输入命令：
+   命令：sudo passwd 
+   设置密码。
+   
+第二步，安装python2.7.6
+   命令：wget http://www.python.org/ftp/python/2.7.6/Python-2.7.6.tar.xz
+   
 
