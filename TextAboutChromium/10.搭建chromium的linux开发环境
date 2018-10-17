@@ -7,7 +7,26 @@
    命令：sudo passwd 
    设置密码。
    
-第二步，安装python2.7.6
+第二步，配置python2.7.6
+   下载python2.7.6：
    命令：wget http://www.python.org/ftp/python/2.7.6/Python-2.7.6.tar.xz
+   
+   解压python2.7.6：
+   命令：xz -d Python-2.7.6.tar.xz
+   命令：tar xvf Python-2.7.6.tar
+   
+   生成makefile编译文件：
+   命令：cd Python-2.7.6
+        ./configure
+        
+   编译：
+   命令：make
+   
+   安装：
+   命令 make install
+   
+   
+   
+   
    
 
