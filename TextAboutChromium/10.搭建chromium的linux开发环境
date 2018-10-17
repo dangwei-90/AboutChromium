@@ -25,6 +25,19 @@
    安装：
    命令 make install
    
+第三步，配置git
+   命令：sudo apt-get install git
+   纯净环境下如果出现如下报错信息：
+     Could not get lock /var/lib/dpkg/lock - open (11: Resource temporarily unavailable)
+     Unable to lock the administration directory (/var/lib/dpkg/), is another process using it?
+   执行：
+   sudo rm /var/lib/apt/lists/lock
+   或者
+   sudo rm /var/cache/apt/archives/lock
+   sudo rm /var/lib/dpkg/lock
+   重启，再次执行安装git即可。
+   git version: 2.7.4
+   
    
    
    
