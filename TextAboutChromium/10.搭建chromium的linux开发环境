@@ -51,7 +51,9 @@
    
    配置环境变量：
    把depot_tools 拷贝至 /path/to/depot_tools
-   export PATH="$PATH:/path/to/depot_tools"
+   命令：~/.bashrc
+   最后添加：export PATH="$PATH:/path/to/depot_tools"
+   可以使用 gedit xxx来打开文件
    
    
    
