@@ -38,7 +38,7 @@
       sudo rm /var/cache/apt/archives/lock
       sudo rm /var/lib/dpkg/lock
       重启，再次执行安装git即可。
-      git version: 2.7.4
+      git version: 1.9.1
       
    配置git相关信息
    git config --global user.name "dangwei"
