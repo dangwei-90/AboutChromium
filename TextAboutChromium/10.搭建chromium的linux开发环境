@@ -51,10 +51,13 @@
    
    配置环境变量：
    把depot_tools 拷贝至 /path/to/depot_tools
-   命令：~/.bashrc
+   打开 ~/.bashrc // .bashrc文件再root下
    最后添加：export PATH="$PATH:/path/to/depot_tools"
    可以使用 gedit xxx来打开文件
    
+   设置代理：
+   export http_proxy=192.168.x.x:10808
+   export https_proxy=192.168.x.x:10808
    
    
    
