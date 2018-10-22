@@ -1,0 +1,9 @@
+1.找到相关的browser.xml
+2.在xml中，找到需要查找控件的大概位置(根据名称单词等方式)
+3.对该位置的png进行搜索，查看验证是否正确
+
+eg:
+1..\src\chrome\app\theme\xxxx\skin目录下找到browser.xml
+2.在xml中找到address
+3.找对应的xxx.png
+4.验证是否找到
