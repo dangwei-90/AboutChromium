@@ -7,3 +7,5 @@ eg:
 2.在xml中找到address
 3.找对应的xxx.png
 4.验证是否找到
+
+如果修改资源，执行 xxx.bat , ninja 编译
