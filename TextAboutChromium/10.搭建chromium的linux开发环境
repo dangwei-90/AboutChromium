@@ -59,6 +59,19 @@
    export http_proxy=192.168.x.x:10808
    export https_proxy=192.168.x.x:10808
    
+   下载代码 fetch --nohooks chromium
+   
+第五步，安装编译环境：Install additional build dependencies
+   执行：build/install-build-deps.sh
+   
+   Run hooks
+   执行 gclient runhooks
+   
+   配置ninja
+   
+   执行gn生成ninja文件
+   gn gen out/Default
+   
    
    
    
