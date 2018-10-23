@@ -79,6 +79,9 @@
    // Run hooks
    // 执行 gclient runhooks
    
+   // 配置依赖库（Ubuntu系统必须执行）
+   build/install-build-deps.sh
+   
    同步代码：
    gclient sync
    
