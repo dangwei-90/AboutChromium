@@ -90,6 +90,9 @@
       
    同步代码：
    gclient sync
+   此处可能遇到的错误：
+      Unknown SSL protocol error in connection to chrome-infra-packages.appspot.com:443 
+      需要设置代理
    
    执行gn生成ninja文件：
    gn gen out/Default
