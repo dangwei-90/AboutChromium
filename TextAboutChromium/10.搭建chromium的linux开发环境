@@ -63,6 +63,16 @@
    
 第五步，安装编译环境：Install additional build dependencies
    执行：build/install-build-deps.sh
+   此处可能会报错
+      It produces the following output:
+      Reading package lists... Done
+      Building dependency tree       
+      Reading state information... Done
+      Note, selecting 'unity-gtk2-module' instead of 'appmenu-gtk'
+      E: Unable to locate package lib32ncurses5-dev
+      E: Unable to locate package lib32z1-dev
+
+   
    
    // Run hooks
    // 执行 gclient runhooks
