@@ -1,4 +1,4 @@
-系统环境：Ubuntu x64 14.04.5 （ubuntu-14.04.5-desktop-amd64.iso）
+系统环境：Ubuntu x64 14.04 （ubuntu-14.04.5-desktop-amd64.iso）
 参考文档：https://chromium.googlesource.com/chromium/src/+/master/docs/linux_build_instructions.md
 虚拟机环境：Vmware 14
 
