@@ -59,9 +59,8 @@
    export http_proxy=192.168.x.x:10808
    export https_proxy=192.168.x.x:10808
    
-   下载代码 fetch --nohooks chromium
-   
-第五步，安装编译环境：Install additional build dependencies
+第五步，下载代码
+   安装编译环境：Install additional build dependencies
    执行：build/install-build-deps.sh
    此处可能会报错
       It produces the following output:
@@ -72,17 +71,17 @@
       E: Unable to locate package lib32ncurses5-dev
       E: Unable to locate package lib32z1-dev
 
-   
+   // 下载代码： 
+   // 由于其他原因，不下载谷歌，采用其他代码
+   // fetch --nohooks chromium
    
    // Run hooks
    // 执行 gclient runhooks
    
-   同步代码
+   同步代码：
    gclient sync
    
-   配置ninja
-   
-   执行gn生成ninja文件
+   执行gn生成ninja文件：
    gn gen out/Default
    
    
