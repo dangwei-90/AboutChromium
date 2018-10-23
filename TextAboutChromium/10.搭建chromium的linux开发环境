@@ -64,8 +64,11 @@
 第五步，安装编译环境：Install additional build dependencies
    执行：build/install-build-deps.sh
    
-   Run hooks
-   执行 gclient runhooks
+   // Run hooks
+   // 执行 gclient runhooks
+   
+   同步代码
+   gclient sync
    
    配置ninja
    
