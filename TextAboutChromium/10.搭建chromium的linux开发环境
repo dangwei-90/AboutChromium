@@ -60,6 +60,11 @@
    export http_proxy=192.168.x.x:10808
    export https_proxy=192.168.x.x:10808
    
+   git config --global http.proxy http://127.0.0.1:8080
+   git config --global https.proxy https://127.0.0.1:8080
+   git config --global http.sslverify false
+
+   
 第五步，下载代码
    安装编译环境：Install additional build dependencies
    执行：build/install-build-deps.sh
