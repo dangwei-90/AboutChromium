@@ -79,6 +79,7 @@
 
    // 下载代码： 
    // 由于其他原因，不下载谷歌，采用其他代码
+   // 由于没有执行fetch，需要确保自己代码仓库有.gclient文件
    // fetch --nohooks chromium
    
    // Run hooks
@@ -92,7 +93,7 @@
       Configuring ttf-mscorefonts-installer为标题的安装微软字体的确认框
       你需要做的通过鼠标点击对话框的任何一个地方确保终端是焦点，接下来按<Tab> 键选中”<OK>”按钮，回车。
       接下来又给你呈现出一个新的窗口，选择“<YES>” 再按回车。
-      
+   
    同步代码：
    gclient sync
    此处可能遇到的错误：
