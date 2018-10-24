@@ -94,7 +94,7 @@
       你需要做的通过鼠标点击对话框的任何一个地方确保终端是焦点，接下来按<Tab> 键选中”<OK>”按钮，回车。
       接下来又给你呈现出一个新的窗口，选择“<YES>” 再按回车。
    
-   同步代码：
+   同步代码：(北京时间晚上6点50下载，遇到过惊喜)
    gclient sync
    此处可能遇到的错误：
       Unknown SSL protocol error in connection to chrome-infra-packages.appspot.com:443 
