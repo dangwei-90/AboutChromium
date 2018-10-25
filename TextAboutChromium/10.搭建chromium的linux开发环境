@@ -7,6 +7,7 @@
    命令：sudo passwd 
    设置密码。
    命令框启动方法： CTRL+ALT+T
+   *注：搭建chromium开发环境，使用普通账号(非root)
    
 第二步，配置python2.7.6
    下载python2.7.6：
