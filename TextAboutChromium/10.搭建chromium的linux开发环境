@@ -102,13 +102,19 @@
       需要设置代理
    此处可能遇到的错误：
       Running depot tools as root is sad.
-      如果用普通用又没有权限的话，可以把路径的所有者从root改为普通用户
+      需要使用普通用户进行操作。如果用普通用又没有权限的话，可以把路径的所有者从root改为普通用户
       sudo chown your_user_name: your_folder_name -R
+   // gclient sync 执行成功后，放可执行后续操作
    
    执行gn生成ninja文件：
+   // 根据需求选择下列参数进行编译
    gn gen out/Default
+   gn gen out/release --args='is_debug=false is_official_build=true symbol_level=2 enable_nacl=false enable_linux_installer=true use_jumbo_build=true'
+   gn gen out/debug --args='enable_nacl=false remove_webcore_debug_symbols=true use_jumbo_build=true'
+   // enable_linux_installer=true 按需删加
    
-   
+   编译
+   ninja -k 100 -C out/debug chrome
    
    
 
