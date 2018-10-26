@@ -11,11 +11,14 @@
    
 第二步，配置python2.7.6
    配置zlib：
-   *注：安装zlib，是保证执行ninja时，避免遇到Python丢失zlib的问题，错误如下：ImportError: No module named zlib
+   // *注：安装zlib，是保证执行ninja时，避免遇到Python丢失zlib的问题，错误如下：ImportError: No module named zlib
+   
    zlib版本：
    zlib-1.2.11.tar.gz
+   
    下载路径：
    http://www.zlib.net/
+   
    命令：
    tar -xzvf lib-1.2.7.tar.gz 
    ./configure 
@@ -33,7 +36,6 @@
    命令：cd Python-2.7.6
         
    configure命令：
-   // ./configure
    ./configure --with-zlib
         
    编译：
@@ -45,10 +47,9 @@
 第三步，配置git
    下载安装git
    命令：sudo apt-get install git
-   
-      纯净环境下如果出现如下报错信息：
-        Could not get lock /var/lib/dpkg/lock - open (11: Resource temporarily unavailable)
-        Unable to lock the administration directory (/var/lib/dpkg/), is another process using it?
+   此处可能会报错：
+      Could not get lock /var/lib/dpkg/lock - open (11: Resource temporarily unavailable)
+      Unable to lock the administration directory (/var/lib/dpkg/), is another process using it?
       执行：
       sudo rm /var/lib/apt/lists/lock
       或者
@@ -82,39 +83,35 @@
 
    
 第五步，下载代码
-   安装编译环境：Install additional build dependencies
-   执行：build/install-build-deps.sh
-   此处可能会报错
-      It produces the following output:
-      Reading package lists... Done
-      Building dependency tree       
-      Reading state information... Done
-      Note, selecting 'unity-gtk2-module' instead of 'appmenu-gtk'
-      E: Unable to locate package lib32ncurses5-dev
-      E: Unable to locate package lib32z1-dev
-
-   // 下载代码： 
+   下载代码： 
    // 由于其他原因，不下载谷歌，采用其他代码
    // 由于没有执行fetch，需要确保自己代码仓库有.gclient文件
    // fetch --nohooks chromium
    
-   // Run hooks
+   Run hooks
+   // 由于其他原因，不下载谷歌，采用其他代码
+   // 由于没有执行fetch，需要确保自己代码仓库有.gclient文件
    // 执行 gclient runhooks
    
-   // 配置依赖库
-   //（注：Ubuntu系统必须执行，出现任何失败情况，请解决失败原因后，继续执行，直到成功后继续执行下一步）
+   配置依赖库
+   // 注：本步骤Ubuntu系统必须执行，出现任何失败情况，请解决失败原因后，继续执行，直到成功后继续执行下一步
    // --no-chromeos-fonts 由于远程下载依赖包并安装时会出现找不到chrome os字体，导致报错，预先添加该参数
+   命令：
    sudo build/install-build-deps.sh --no-chromeos-fonts
    此处可能遇到弹框：
       Configuring ttf-mscorefonts-installer为标题的安装微软字体的确认框
       你需要做的通过鼠标点击对话框的任何一个地方确保终端是焦点，接下来按<Tab> 键选中”<OK>”按钮，回车。
       接下来又给你呈现出一个新的窗口，选择“<YES>” 再按回车。
+   此处可能会报错：
+      E: Unable to locate package lib32ncurses5-dev
+      E: Unable to locate package lib32z1-dev
+      检查ubuntu版本，ubuntu-14.04.5-desktop-amd64.iso
    
-   同步代码：(北京时间晚上6点50下载，遇到过惊喜)
+   同步代码：(北京时间晚上6点50下载，遇到过惊喜，speed 5M/s)
    gclient sync
    此处可能遇到的错误：
       Unknown SSL protocol error in connection to chrome-infra-packages.appspot.com:443 
-      需要设置代理
+      重新设置代理
    此处可能遇到的错误：
       Running depot tools as root is sad.
       需要使用普通用户进行操作。如果用普通用又没有权限的话，可以把路径的所有者从root改为普通用户
