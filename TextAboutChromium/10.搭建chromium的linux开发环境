@@ -3,7 +3,11 @@
 虚拟机环境：Vmware 14
 *注：搭建chromium开发环境，使用普通账号(非root)，如果普通用户遇到权限问题，使用sudo提权
 
+
 第一步，安装iso.
+   系统下载路径：
+   https://yunpan.360.cn/surl_ymvmTipx8Pf （提取码：07bb）
+   
    首次安装乌班图系统后登陆root，需要输入命令：
    命令：sudo passwd 
    设置密码。
