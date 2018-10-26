@@ -108,7 +108,7 @@
    
    执行gn生成ninja文件：
    // 根据需求选择下列参数进行编译
-   gn gen out/Default
+   // gn gen out/debug
    gn gen out/release --args='is_debug=false is_official_build=true symbol_level=2 enable_nacl=false enable_linux_installer=true use_jumbo_build=true'
    gn gen out/debug --args='enable_nacl=false remove_webcore_debug_symbols=true use_jumbo_build=true'
    // enable_linux_installer=true 按需删加
