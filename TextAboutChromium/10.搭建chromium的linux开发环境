@@ -29,7 +29,7 @@
    cd zlib-1.2.7
    ./configure 
    make 
-   make install
+   sudo make install
   
    下载python2.7.6：
    命令：wget http://www.python.org/ftp/python/2.7.6/Python-2.7.6.tar.xz
