@@ -65,8 +65,8 @@
       git version: 1.9.1
       
    配置git相关信息
-   git config --global user.name "dangwei"
-   git config --global user.email dangwei@360.cn
+   git config --global user.name "test"
+   git config --global user.email test@email.cn
    git config --list // 可查看
    
 第四步，Install depot_tools
@@ -114,7 +114,8 @@
       检查ubuntu版本，ubuntu-14.04.5-desktop-amd64.iso
    
    同步代码：(北京时间晚上6点50下载，遇到过惊喜，speed 5M/s)
-   gclient sync
+   // gclient sync
+   // 由于其他原因，不同步谷歌代码，采用其他代码
    此处可能遇到的错误：
       Unknown SSL protocol error in connection to chrome-infra-packages.appspot.com:443 
       重新设置代理
