@@ -1,0 +1,48 @@
+系统环境：mac OS 10.13.6
+参考文档：https://chromium.googlesource.com/chromium/src/+/master/docs/mac_build_instructions.md
+*注：搭建chromium开发环境，使用普通账号(非root)，如果普通用户遇到权限问题，使用sudo提权
+
+
+第一步，按照Xcode
+   app store 下载安装 xcode
+
+第二步，安装depot_tools
+   命令
+   git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
+   
+   安装路径：
+   /path/to/depot_tools
+
+第三步，添加depot_tools环境变量
+   命令
+   vi ~/.bash_profile
+   
+   添加
+   export PATH="$PATH:/path/to/depot_tools"
+   
+   检查
+   $echo PATH
+
+第四步，获取chromium并安装必要组件
+   $ mkdir chromium && cd chromium
+   $ git config --global core.precomposeUnicode true
+
+第五步，获取浏览器代码
+   执行 $ ssh-keygen -t rsa，按提示生成rsa_id.pub文件，把内容加入gerrit平台。
+   注：在mac比较新的系统版本下可能会报这个错
+      no matching cipher found. Their offer: aes128-cbc,3des-cbc,blowfish-cbc
+   解决方法：sudo nano /etc/ssh/ssh_config
+          找到下列信息 
+          #Ciphers aes128-ctr,aes192-ctr,aes256-ctr,aes128-cbc,3des-cbc
+          取消注释，即可。
+          
+   注：如果git checkout 失败，添加 --force       
+   git checkout --force XXXX切换到指定分支
+
+第六步，run hook
+   进入src目录，执行 $ gn gen out/Default --args='is_debug=false is_official_build=false symbol_level=2 enable_nacl=false use_jumbo_build=true'
+   注：（Default名字可以随便取，必须加上--args，才会在out/Default目录下生出args.gn文件，之后可以修改，is_official_build设为true会报错）
+
+第七步，编译
+   ninja -k 100 -C out/Default chrome
+   注：第一次编译加-k，因为一些依赖文件是编译中生成。
