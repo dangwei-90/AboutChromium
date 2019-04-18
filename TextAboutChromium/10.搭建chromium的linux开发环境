@@ -98,7 +98,8 @@
    // 由于其他原因，不下载谷歌，采用其他代码
    // 由于没有执行fetch，需要确保自己代码仓库有.gclient文件
    // 执行 gclient runhooks
-      
+   注:gclient runhooks由于代理问题，会反复出现下载失败问题，此处如果是下载失败类问题，则继续执行 gclient runhooks即可
+   
    此处可能遇到问题：
       CIPD selfupdate failed. Trying to bootstrap the CIPD client from scratch...
       处理方法:export DEPOT_TOOLS_UPDATE=0
