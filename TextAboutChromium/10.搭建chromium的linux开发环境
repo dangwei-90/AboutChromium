@@ -138,7 +138,8 @@
    此处可能遇到的问题：
       Running hooks: 12% ( 8/64) binutils
       手动拼接下载后，拷贝到该目录
-   
+      eg:https://storage.googleapis.com/chromium-binutils/0cb5726d9701f8be6a81b199899de1de552922f2
+      
    配置依赖库
    // 注：本步骤Ubuntu系统必须执行，出现任何失败情况，请解决失败原因后，继续执行，直到成功后继续执行下一步
    // --no-chromeos-fonts 由于远程下载依赖包并安装时会出现找不到chrome os字体，导致报错，预先添加该参数
