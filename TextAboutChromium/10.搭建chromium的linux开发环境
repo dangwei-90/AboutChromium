@@ -100,6 +100,17 @@
    // 执行 gclient runhooks
    注:gclient runhooks由于代理问题，会反复出现下载失败问题，此处如果是下载失败类问题，则继续执行 gclient runhooks即可
    
+   注：checkout 到 release tag，再次 sync 的时候，需要附加 –with_branch_heads 参数。否则可能会遇到以下错误：
+
+   src/third_party/webrtc (ERROR)
+   ----------------------------------------
+   [0:00:13] Started.
+   [0:00:25] _____ src/third_party/webrtc : Attempting rebase onto 4ab51cb6d7d4530b344e63ed8274d1454b7a5f39...
+   [0:00:26]
+   [0:00:26] Rebase produced error output:
+   fatal: Needed a single revision
+   Does not point to a valid commit: 4ab51cb6d7d4530b344e63ed8274d1454b7a5f39
+   
    此处可能遇到问题：
       CIPD selfupdate failed. Trying to bootstrap the CIPD client from scratch...
       处理方法:export DEPOT_TOOLS_UPDATE=0
