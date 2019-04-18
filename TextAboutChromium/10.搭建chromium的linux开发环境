@@ -124,7 +124,18 @@
       处理方法：git clone https://chromium.googlesource.com/external/gyp
                cd gyp
 	       sudo ./setup.py install
-      
+   
+   此处可能遇到的问题：
+      You have PROXYvalues set in your environment, but gsutil in depot_tools does not (yet) obeythem.
+      处理方法:新建文件 proxy_webrtc.boto
+              内容：
+ 	      [Boto] 
+              proxy = example-host 
+ 	      proxy_port = port number 
+	      执行:
+ 	      export NO_AUTH_BOTO_CONFIG=/path/to/proxy_webrtc.boto 
+   
+   
    配置依赖库
    // 注：本步骤Ubuntu系统必须执行，出现任何失败情况，请解决失败原因后，继续执行，直到成功后继续执行下一步
    // --no-chromeos-fonts 由于远程下载依赖包并安装时会出现找不到chrome os字体，导致报错，预先添加该参数
