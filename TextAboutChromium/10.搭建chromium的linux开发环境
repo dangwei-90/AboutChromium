@@ -98,6 +98,14 @@
    // 由于其他原因，不下载谷歌，采用其他代码
    // 由于没有执行fetch，需要确保自己代码仓库有.gclient文件
    // 执行 gclient runhooks
+      
+   此处可能遇到问题：
+      CIPD selfupdate failed. Trying to bootstrap the CIPD client from scratch...
+      处理方法:export DEPOT_TOOLS_UPDATE=0
+   
+   此处可能遇到问题：
+      gn.py: Could not find gn executable at: /media/data/Projects/OpenSource/chromium/src/buildtools/linux64/gn
+	   处理方法：执行gclient runhooks，如果不行，拷贝自己浏览器仓库的buildtools到此处
    
    配置依赖库
    // 注：本步骤Ubuntu系统必须执行，出现任何失败情况，请解决失败原因后，继续执行，直到成功后继续执行下一步
