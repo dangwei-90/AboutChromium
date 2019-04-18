@@ -135,6 +135,9 @@
 	      执行:
  	      export NO_AUTH_BOTO_CONFIG=/path/to/proxy_webrtc.boto 
    
+   此处可能遇到的问题：
+      Running hooks: 12% ( 8/64) binutils
+      手动拼接下载后，拷贝到该目录
    
    配置依赖库
    // 注：本步骤Ubuntu系统必须执行，出现任何失败情况，请解决失败原因后，继续执行，直到成功后继续执行下一步
